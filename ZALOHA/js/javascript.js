@@ -1,4 +1,4 @@
-let gallery = $('gallery');
+
 var json = (function () {
     var json = null;
     $.ajax({
@@ -14,9 +14,7 @@ var json = (function () {
 })();
 for(var i=0;i<json.photos.length;i++) {
     var image ='<img draggable="true" src="'+json.photos[i].src+'" alt="'+json.photos[i].title+'" class="'+'mini"'+' id="'+i.toString()+'"'+'>'
-
-    gallery.append(image);
-
+    $('gallery').append(image);
     $('#'+i.toString()).click(function() {
         $('#overlay').addClass('active');
         $('#behind-scene').addClass('active');
@@ -81,7 +79,7 @@ function leftArrow(id){
     }
     var classList = $('#'+nextId).attr('class').split(/\s+/);
     console.log(classList.length);
-    if(classList.length>2){
+    if(classList.length>1){
         leftArrow(nextId);
     }else{
         console.log('nextID= '+nextId);
@@ -99,82 +97,10 @@ $('#stop').click(function (){
 function showSlide(){
     rightArrow(document.getElementById('rightArrow').value);
 }
-gallery.sortable({
-
-    opacity: 0.5,
-    distance: 50,
-    containment: ".gallery",
-    cursor:"grabbing",
-    connectWith:"json.photos",
-    change:function (){
-        var sortedIDs = $( gallery).sortable( "toArray" );
-        var src=[];
-        for(let i = 0; i<sortedIDs.length;i++) {
-            let split = document.getElementById(sortedIDs[i]).src.split('/');
-            src[i]=split[split.length-1];
-        }
-        let change = [];
-        for(let i = 0; i<json.photos.length;i++){
-            let split = json.photos[i].src.split('/');
-            if(src[i]!==split[split.length-1]){
-                change.push(i);
-                console.log(json.photos[i]);
-            }
-        }
-        if(change.length!==2){
-            var b = json.photos[change[0]];
-            json.photos[change[0]] = json.photos[change[1]];
-            json.photos[change[1]] = b;
-            console.log(json.photos);}
-
-    },
-    active:function (){
-        var sortedIDs = $( gallery).sortable( "toArray" );
-        var src=[];
-        for(let i = 0; i<sortedIDs.length;i++) {
-            let split = document.getElementById(sortedIDs[i]).src.split('/');
-            src[i]=split[split.length-1];
-        }
-        let change = [];
-        for(let i = 0; i<json.photos.length;i++){
-            let split = json.photos[i].src.split('/');
-            if(src[i]!==split[split.length-1]){
-                change.push(i);
-                console.log(json.photos[i]);
-            }
-        }
-
-        if(change.length!==2){
-            var b = json.photos[change[0]];
-            json.photos[change[0]] = json.photos[change[1]];
-            json.photos[change[1]] = b;
-            console.log(json.photos);}
-
-    },
-    stop:function (){
-        var sortedIDs = $( gallery).sortable( "toArray" );
-        var src=[];
-        for(let i = 0; i<sortedIDs.length;i++) {
-            let split = document.getElementById(sortedIDs[i]).src.split('/');
-            src[i]=split[split.length-1];
-        }
-        let change = [];
-        let split;
-        for(let i = 0; i<json.photos.length;i++){
-            console.log(json.photos[i]);
-             split= json.photos[i].src.split('/');
-            if(src[i]!==split[split.length-1]){
-                change.push(i);
-                console.log(json.photos[i]);
-            }
-        }
-        if(change.length!==2){
-            var b = json.photos[change[0]];
-            json.photos[change[0]] = json.photos[change[1]];
-            json.photos[change[1]] = b;
-            console.log(json.photos);}
-
-    }
+$(document).ready(function() {
+    $('#dropzone').sortable({
+        revert:true
+    });
 
 });
 

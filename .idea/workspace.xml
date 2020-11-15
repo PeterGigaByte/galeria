@@ -1,7 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed5616d5-5237-4a70-9248-053ae4a1be14" name="Default Changelist" comment="" />
+    <list default="true" id="ed5616d5-5237-4a70-9248-053ae4a1be14" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ZALOHA/js/javascript.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ZALOHA/js/jquery-3.5.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/galeria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/galeria.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/javascript.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,23 +44,30 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1kFYlrT8cytjG4KIIaQNzOpMMix" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ZALOHA" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Peter\WebstormProjects\galeria\ZALOHA" />
       <recent name="C:\Users\Peter\WebstormProjects\galeria\images" />
     </key>
   </component>
@@ -47,12 +81,26 @@
       <updated>1605297961061</updated>
       <workItem from="1605297962096" duration="5350000" />
       <workItem from="1605309175397" duration="7669000" />
-      <workItem from="1605349024165" duration="30366000" />
+      <workItem from="1605349024165" duration="31419000" />
+      <workItem from="1605433170696" duration="14899000" />
+      <workItem from="1605453756719" duration="5499000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="697" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605380283852">
@@ -63,6 +111,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/270.-768.1360.728@0.0.1920.1040" timestamp="1605315141242" />
+    <state x="845" y="424" key="Github.ShareDialog" timestamp="1605389804951">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="845" y="424" key="Github.ShareDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605389804951" />
+    <state x="777" y="231" key="Github.UntrackedFilesDialog" timestamp="1605389810802">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="231" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605389810802" />
+    <state x="559" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605462125306">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="559" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605462125306" />
     <state x="955" y="0" width="972" height="1047" key="dock-window-1" timestamp="1605312819110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
