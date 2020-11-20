@@ -1,5 +1,14 @@
-
-
+let cookie = $('#cookie')
+let allow;
+if(!allow){
+    cookie.addClass('active');
+    $('#overlay').addClass('active');
+}
+$('#buttonCookie').click(function (){
+    setCookie('permission',true)
+    cookie.removeClass('active');
+    $('#overlay').removeClass('active');
+})
 let gallery = $('#dropzone');
 let json = (function () {
     let json = null;
@@ -17,6 +26,7 @@ let json = (function () {
 let cookies = [];
 cookies=pushToArrayCookies(cookies);
 printArray(cookies);
+
 let idC;
 for(let i=0;i<json.photos.length;i++) {
     if(cookies.length===json.photos.length && cookies[0]){
@@ -128,7 +138,8 @@ $('#stop').click(function (){
     clearInterval(myShow);
 });
 function showSlide(){
-    rightArrow(document.getElementById('rightArrow').value);
+    let images = gallery.children();
+    rightArrow(images);
 }
 $( function() {
     $( gallery ).sortable({
