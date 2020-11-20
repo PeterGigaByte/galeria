@@ -1,6 +1,6 @@
-let gallery = $('gallery');
-var json = (function () {
-    var json = null;
+let gallery = $('#dropzone');
+let json = (function () {
+    let json = null;
     $.ajax({
         'async': false,
         'global': false,
@@ -12,8 +12,8 @@ var json = (function () {
     });
     return json;
 })();
-for(var i=0;i<json.photos.length;i++) {
-    var image ='<img draggable="true" src="'+json.photos[i].src+'" alt="'+json.photos[i].title+'" class="'+'mini"'+' id="'+i.toString()+'"'+'>'
+for(let i=0;i<json.photos.length;i++) {
+    let image ='<img draggable="true" src="'+json.photos[i].src+'" alt="'+json.photos[i].title+'" class="'+'mini"'+' id="'+i.toString()+'"'+'>'
 
     gallery.append(image);
 
@@ -23,11 +23,10 @@ for(var i=0;i<json.photos.length;i++) {
         createScene(this.id,json);
     });
 }
-
 $('#searchBox').keyup(function (){
-    var str1 = this.value.toLowerCase();
+    let str1 = this.value.toLowerCase();
     console.log("---------------------------------");
-    for(var i = 0;i<json.photos.length;i++){
+    for(let i = 0;i<json.photos.length;i++){
         if(json.photos[i].title.toLowerCase().includes(str1)){
             $('#'+i).removeClass('hidden');
         }else{
@@ -37,6 +36,7 @@ $('#searchBox').keyup(function (){
     console.log("---------------------------------");
 });
 function createScene(id){
+    let images = gallery.children();
     $('#behind-scene-header').html('<div class="title">'+json.photos[id].title+'</div>'+'<input id="exit" type="image" src="images/exit.png" alt="exit" class="exit" />');
     $('#behind-scene-body').html('<img src="'+json.photos[id].src+'" alt="'+json.photos[id].title+'" class="'+'full"'+' id="'+id.toString()+'"'+'>'+'<div class="leftArrow">\n' +
         '                    <input type="image" id="leftArrow" value="'+id+'" class="leftArrow" alt="leftArrow" src="images/left_arrow.png">\n' +
@@ -50,44 +50,61 @@ function createScene(id){
         clearInterval(myShow);
     });
     $('#leftArrow').click(function (){
-        leftArrow(this.value);
+        leftArrow(images);
     });
     $('#rightArrow').click(function (){
-        rightArrow(this.value);
+        rightArrow(images);
     });
 }
-function rightArrow(id){
-    console.log('thisValue= '+id);
-    var nextId=parseInt(id)+1;
-    if(nextId>=parseInt(json.photos.length)){
-        nextId=0;
+function findPosInArray(id,images){
+    for (let index=0;index<images.length;index++){
+        if(images[index].id===id){
+            return index;
+        }
     }
-    var classList = $('#'+nextId).attr('class').split(/\s+/);
-    console.log(classList.length);
-    if(classList.length>2){
-        rightArrow(nextId);
-    }else{
-        console.log('nextID= '+nextId);
-        createScene(nextId);
-        console.log("Right ARROW clicked");
-    }
-
 }
-function leftArrow(id){
-    console.log('thisValue= '+id);
-    var nextId=parseInt(id)-1;
-    if(nextId<0){
-        nextId=parseInt(json.photos.length)-1;
+function getNextPosInArray(positionInArray,images){
+    let newPosition = positionInArray+1;
+    if(newPosition>images.length-1){
+        newPosition=0;
+        console.log(newPosition);
     }
-    var classList = $('#'+nextId).attr('class').split(/\s+/);
-    console.log(classList.length);
+    let classList = $('#'+newPosition).attr('class').split(/\s+/);
     if(classList.length>2){
-        leftArrow(nextId);
-    }else{
-        console.log('nextID= '+nextId);
-        createScene(nextId);
-        console.log("Left ARROW clicked");
+        getNextPosInArray(newPosition,images);
     }
+    let position = images[newPosition];
+    return position.id;
+}
+function getPreviousPosInArray(positionInArray,images){
+    let previousPosition = positionInArray-1;
+    if(previousPosition<0){
+        console.log(previousPosition);
+        previousPosition=images.length-1;
+        console.log(previousPosition);
+    }
+    let classList = $('#'+previousPosition).attr('class').split(/\s+/);
+    if(classList.length>2){
+        getPreviousPosInArray(previousPosition,images);
+    }
+    let position = images[previousPosition];
+    return position.id;
+}
+function rightArrow(images){
+    let id = document.getElementsByClassName('full')[0].id;
+    console.log('thisValue= '+id);
+    let positionInArray = findPosInArray(id,images);
+    console.log(positionInArray);
+    let nextPosition = getNextPosInArray(positionInArray,images);
+    createScene(nextPosition);
+}
+function leftArrow(images){
+    let id = document.getElementsByClassName('full')[0].id;
+    console.log('thisValue= '+id);
+    let positionInArray = findPosInArray(id,images);
+    console.log(positionInArray);
+    let previousPosition = getPreviousPosInArray(positionInArray,images);
+    createScene(previousPosition);
 }
 var myShow;
 $('#play').click(function (){
@@ -99,82 +116,8 @@ $('#stop').click(function (){
 function showSlide(){
     rightArrow(document.getElementById('rightArrow').value);
 }
-gallery.sortable({
-
-    opacity: 0.5,
-    distance: 50,
-    containment: ".gallery",
-    cursor:"grabbing",
-    connectWith:"json.photos",
-    change:function (){
-        var sortedIDs = $( gallery).sortable( "toArray" );
-        var src=[];
-        for(let i = 0; i<sortedIDs.length;i++) {
-            let split = document.getElementById(sortedIDs[i]).src.split('/');
-            src[i]=split[split.length-1];
-        }
-        let change = [];
-        for(let i = 0; i<json.photos.length;i++){
-            let split = json.photos[i].src.split('/');
-            if(src[i]!==split[split.length-1]){
-                change.push(i);
-                console.log(json.photos[i]);
-            }
-        }
-        if(change.length!==2){
-            var b = json.photos[change[0]];
-            json.photos[change[0]] = json.photos[change[1]];
-            json.photos[change[1]] = b;
-            console.log(json.photos);}
-
-    },
-    active:function (){
-        var sortedIDs = $( gallery).sortable( "toArray" );
-        var src=[];
-        for(let i = 0; i<sortedIDs.length;i++) {
-            let split = document.getElementById(sortedIDs[i]).src.split('/');
-            src[i]=split[split.length-1];
-        }
-        let change = [];
-        for(let i = 0; i<json.photos.length;i++){
-            let split = json.photos[i].src.split('/');
-            if(src[i]!==split[split.length-1]){
-                change.push(i);
-                console.log(json.photos[i]);
-            }
-        }
-
-        if(change.length!==2){
-            var b = json.photos[change[0]];
-            json.photos[change[0]] = json.photos[change[1]];
-            json.photos[change[1]] = b;
-            console.log(json.photos);}
-
-    },
-    stop:function (){
-        var sortedIDs = $( gallery).sortable( "toArray" );
-        var src=[];
-        for(let i = 0; i<sortedIDs.length;i++) {
-            let split = document.getElementById(sortedIDs[i]).src.split('/');
-            src[i]=split[split.length-1];
-        }
-        let change = [];
-        let split;
-        for(let i = 0; i<json.photos.length;i++){
-            console.log(json.photos[i]);
-             split= json.photos[i].src.split('/');
-            if(src[i]!==split[split.length-1]){
-                change.push(i);
-                console.log(json.photos[i]);
-            }
-        }
-        if(change.length!==2){
-            var b = json.photos[change[0]];
-            json.photos[change[0]] = json.photos[change[1]];
-            json.photos[change[1]] = b;
-            console.log(json.photos);}
-
-    }
-
-});
+$( function() {
+    $( gallery ).sortable();
+    $( gallery ).disableSelection();
+    });
 
