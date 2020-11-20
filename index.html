@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Foto galéria</title>
+    <link rel="icon"
+          href="images/icon.png">
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+</head>
+<body>
+<div class="wrapper">
+<header>
+    <div class="header">
+        Galéria
+    </div>
+</header>
+<main>
+    <div class="searchBox">
+        <label for="searchBox">
+            Filter:
+        </label>
+        <input name="searchBox" id="searchBox" class="searchBoxInput" type="text">
+
+        <div id="gallery" class="gallery">
+            <gallery id="dropzone" >
+
+
+            </gallery>
+        </div>
+
+        <div id="behind-scene" class="behind-scene">
+
+            <div id="behind-scene-header" class="behind-scene-header">
+
+
+            </div>
+
+            <div id="behind-scene-body" class="behind-scene-body">
+
+
+            </div>
+            <div class="buttons">
+                  <div class="pad">
+                      <input id="play" type="image" src="images/play.png" alt="exit" class="exit" />
+                  </div>
+                  <div class="pad">
+                      <input id="stop" value="0" type="image" src="images/stop.png" alt="exit" class="exit" />
+                  </div>
+              </div>
+
+              <hr>
+
+              <div id="description" class="description">
+
+              </div>
+
+
+          </div>
+
+      </div>
+  </main>
+
+  <footer class="footer">
+      ©PeterRigoDevelopment
+  </footer>
+    <div id="cookie" class="cookies behind-scene">
+        <div class="behind-scene-header">
+            <span class="header-cookies">TÁTO STRÁNKA POUŽÍVA SÚBORY COOKIES.</span>
+            <div>S cieľom zabezpečiť riadne fungovanie tejto webovej lokality ukladáme niekedy na vašom zariadení malé dátové súbory, tzv. cookie. Je to bežná prax väčšiny veľkých webových lokalít.
+
+                <button id="buttonCookie" class="button" type="button">Súhlasím</button></div>
+
+        </div>
+
+    </div>
+  <div id="overlay" ></div>
+
+
+    </div>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" ></script>
+  <script src="js/javascript.js"></script>
+
+  </body>
+  </html>

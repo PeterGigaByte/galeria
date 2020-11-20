@@ -1,0 +1,40 @@
+{
+  "photos":
+  [
+    {
+      "src": "images/bolt.jpg",
+      "title": "Bolt v akcii",
+      "description": "Bolt shot out of the blocks, but not quite as explosively as the other Olympians. His slower reaction time left him seventh out of eight near the start. Gaining speed, by 30 meters he moved up to the middle of the pack. Then, still accelerating like a bullet train, he put daylight between himself and the rest of the field."
+    },
+    {
+      "src": "images/danka.jpg",
+      "title": "Daniela Ledecká",
+      "description": "Tento slovenský rekord som nečakala, netušila som, že môžem tak rýchlo bežať. Bolo to na hrane... Za poslednou prekážkou som už dosť stvrdla, lebo sa mi aj podlomila noha, no silou vôle som to úspešne dobojovala až do cieľa,“ zdôraznila 22-ročná pretekárka ŠOG Nitra, ktorá prezradila aj taktiku, s ktorou nastupovala na štart."
+    },
+    {
+      "src": "images/lukas.jpg",
+      "title": "Lukáš Koreň",
+      "description": "Medzištátne stretnutie."
+    },
+    {
+      "src": "images/peter_rigo.jpg",
+      "title": "Bloky v Dubnici",
+      "description": "Katastrofálny stav štartových blokov na štadióne v Dubnici. Pretekárovi Petrovi Rigovi pri štarte odleteli bloky a mohol sa vážne zraniť. :D"
+    },
+    {
+      "src": "images/stafetasvk.jpg",
+      "title": "Štafeta SVK",
+      "description": "Úspešná štafeta v Šamoríne."
+    },
+    {
+      "src": "images/matej.jpg",
+      "title": "Matej Tóth",
+      "description": "Po dlhom a dôkladnom očisťovaní svojho mena od dopingových obvinení prišli ďalšie mesiace útrap. Tréningové však zvládal aj s typickým úsmevom. Po marcovom skvelom výkone na Dudinskej päťdesiatke sa Matej Tóth (35) na štyri mesiace zavrel do tréningovej bubliny."
+    },
+    {
+      "src": "images/legendarna_stafeta.jpg",
+      "title": "Slovensku môže závidieť celý",
+      "description": "Medzi 110 pretekármi z 20 krajín zažiaria určite Slovenky, najmä svojím príťažlivým výzorom. Veru, toľko sexi pretekárok nemala slovenská atletika veľmi dávno! Ako ukážku sme vybrali kvarteto Emma Zapletalová (20), Iveta Putalová, Daniela Ledecká (23) a Alexandra Bezeková (28), ktoré na ME 2018 v Berlíne senzačne postúpilo do finále v behu na 4 x 400 m."
+    }
+  ]
+}
