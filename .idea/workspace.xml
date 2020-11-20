@@ -20,13 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed5616d5-5237-4a70-9248-053ae4a1be14" name="Default Changelist" comment="update">
-      <change beforePath="$PROJECT_DIR$/.idea/galeria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/galeria.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/javascript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +87,7 @@
       <workItem from="1605641330511" duration="605000" />
       <workItem from="1605780504018" duration="19000" />
       <workItem from="1605836023619" duration="1535000" />
-      <workItem from="1605876330226" duration="5660000" />
+      <workItem from="1605876330226" duration="15471000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605462240400</created>
@@ -101,7 +96,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605462240400</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update">
+      <created>1605882167850</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1605882167850</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,10 +142,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="777" y="231" key="Github.UntrackedFilesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1605389810802" />
-    <state x="559" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605462244456">
+    <state x="559" y="259" key="Vcs.Push.Dialog.v2" timestamp="1605882170107">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="559" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605462244456" />
+    <state x="559" y="259" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1605882170107" />
     <state x="955" y="0" width="972" height="1047" key="dock-window-1" timestamp="1605312819110">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -1,3 +1,5 @@
+
+
 let gallery = $('#dropzone');
 let json = (function () {
     let json = null;
@@ -12,20 +14,32 @@ let json = (function () {
     });
     return json;
 })();
+let cookies = [];
+cookies=pushToArrayCookies(cookies);
+printArray(cookies);
+let idC;
 for(let i=0;i<json.photos.length;i++) {
-    let image ='<img draggable="true" src="'+json.photos[i].src+'" alt="'+json.photos[i].title+'" class="'+'mini"'+' id="'+i.toString()+'"'+'>'
+    if(cookies.length===json.photos.length && cookies[0]){
+        idC=cookies[i]
+    }
+    else{
+        idC=i;
+    }
+    let image ='<img draggable="true" src="'+json.photos[idC].src+'" alt="'+json.photos[idC].title+'" class="'+'mini"'+' id="'+idC.toString()+'"'+'>'
 
     gallery.append(image);
 
-    $('#'+i.toString()).click(function() {
+    $('#'+idC.toString()).click(function() {
         $('#overlay').addClass('active');
         $('#behind-scene').addClass('active');
         createScene(this.id,json);
     });
 }
+
 $('#searchBox').keyup(function (){
     let str1 = this.value.toLowerCase();
     console.log("---------------------------------");
+
     for(let i = 0;i<json.photos.length;i++){
         if(json.photos[i].title.toLowerCase().includes(str1)){
             $('#'+i).removeClass('hidden');
@@ -67,11 +81,11 @@ function getNextPosInArray(positionInArray,images){
     let newPosition = positionInArray+1;
     if(newPosition>images.length-1){
         newPosition=0;
-        console.log(newPosition);
     }
-    let classList = $('#'+newPosition).attr('class').split(/\s+/);
+    let classList = $('#'+images[newPosition].id).attr('class').split(/\s+/);
     if(classList.length>2){
-        getNextPosInArray(newPosition,images);
+        console.log('rekurzia');
+        return  getNextPosInArray(newPosition,images);
     }
     let position = images[newPosition];
     return position.id;
@@ -79,23 +93,23 @@ function getNextPosInArray(positionInArray,images){
 function getPreviousPosInArray(positionInArray,images){
     let previousPosition = positionInArray-1;
     if(previousPosition<0){
-        console.log(previousPosition);
         previousPosition=images.length-1;
-        console.log(previousPosition);
     }
-    let classList = $('#'+previousPosition).attr('class').split(/\s+/);
+    let classList = $('#'+images[previousPosition].id).attr('class').split(/\s+/);
     if(classList.length>2){
-        getPreviousPosInArray(previousPosition,images);
+        console.log('rekurzia');
+        return  getPreviousPosInArray(previousPosition,images);
     }
     let position = images[previousPosition];
     return position.id;
 }
 function rightArrow(images){
     let id = document.getElementsByClassName('full')[0].id;
-    console.log('thisValue= '+id);
     let positionInArray = findPosInArray(id,images);
-    console.log(positionInArray);
+    console.log('thisValue= '+positionInArray);
+
     let nextPosition = getNextPosInArray(positionInArray,images);
+    console.log('id v jsone',nextPosition);
     createScene(nextPosition);
 }
 function leftArrow(images){
@@ -117,7 +131,39 @@ function showSlide(){
     rightArrow(document.getElementById('rightArrow').value);
 }
 $( function() {
-    $( gallery ).sortable();
-    $( gallery ).disableSelection();
+    $( gallery ).sortable({
+        stop: function (){
+            setAllCookies();
+            cookies = pushToArrayCookies(cookies);
+        }
     });
+    $( gallery ).disableSelection();
+    setAllCookies();
+    });
+function setCookie(key, value) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+}
+function getCookie(key) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+}
+function pushToArrayCookies(array){
+    for(let index = 0;index<json.photos.length;index++){
+        array.push(getCookie(index));
+    }
+    return array;
+}
+function printArray(array){
+    for(let index = 0;index<array.length;index++){
+        console.log(array[index]);
+    }
+}
+function setAllCookies(){
+    let images = document.getElementsByClassName('mini');
+    for (let index = 0;index<images.length;index++){
+        setCookie(index,images[index].id);
+    }
+}
 
