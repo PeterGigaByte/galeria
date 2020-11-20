@@ -19,13 +19,26 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ed5616d5-5237-4a70-9248-053ae4a1be14" name="Default Changelist" comment="final 90%">
+    <list default="true" id="ed5616d5-5237-4a70-9248-053ae4a1be14" name="Default Changelist" comment="final 100%">
+      <change afterPath="$PROJECT_DIR$/images/matej.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ZALOHA/js/javascript.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ZALOHA/js/jquery-3.5.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/javascript.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/javascript.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/stylesheet.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/background_body.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/bolt.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/danka.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/exit.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/left_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/lukas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/peter_rigo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/right_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/stafetasvk.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/stop.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/javascript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/jquery-3.5.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/photosJSON/photos.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/stylesheet.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,19 +59,22 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1kFYlrT8cytjG4KIIaQNzOpMMix" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -91,7 +107,8 @@
       <workItem from="1605641330511" duration="605000" />
       <workItem from="1605780504018" duration="19000" />
       <workItem from="1605836023619" duration="1535000" />
-      <workItem from="1605876330226" duration="19565000" />
+      <workItem from="1605876330226" duration="20507000" />
+      <workItem from="1605899681366" duration="1265000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1605462240400</created>
@@ -114,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605892716034</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="final 100%">
+      <created>1605897557258</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1605897557258</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -133,9 +157,11 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="update" />
     <MESSAGE value="final 90%" />
-    <option name="LAST_COMMIT_MESSAGE" value="final 90%" />
+    <MESSAGE value="final 100%" />
+    <option name="LAST_COMMIT_MESSAGE" value="final 100%" />
   </component>
   <component name="WindowStateProjectService">
     <state x="697" y="273" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605380283852">
